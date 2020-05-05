@@ -2,30 +2,20 @@
 <html>
 <head>
 	<title>{% block title %} {% endblock %}</title>
-	<link rel="stylesheet" type="text/css" href={{ url_for("static",filename = "css/main.css")}}>
+	{% include "_head.jinja" %}
 </head>
 <body>
 <header>
 	<h1> <a href="{{ url_for("view_welcome_page")}}">Myblog</a></h1>
 </header>
 
-<nav>
-	<ul class=nav>
-		<li><a href="{{ url_for("view_about")}}">About</a></li>
-		<li><a href="{{ url_for("view_articles")}}">Articles</a></li>
-		<li><a href="{{ url_for("view_admin")}}">Admin</a></li>
-	</ul>
-</nav>
+{% include "_navigation.jinja" %}
 
 <main>
 	{% block main %} {% endblock %}
 </main>
-<footer>
-	<p>
-		(C) 2020 Illnesses
-	</p>
-</footer>
 
+{% include "_footer.jinja" %}
 
 </body>
 </html>

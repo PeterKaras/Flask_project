@@ -1,0 +1,63 @@
+articles = {
+        1: {"title":"Music",
+            "content": "Music, when I hear this word, I imagine sounds of my favorite recent song. It doesn’t matter what kind of song you listen to. It has to be something that you really enjoy and want to listen nonstop."
+            "Every person has heard at least one song. I assume that it has caused Goosebumps and wanted to replay the song once again. Music is very wholesome/blissful tool for people."
+            "Music has ability to exempt people from daily routine and problems and it can also relax our brain. Afterwards, you feel really good and your mind is in positive mood."
+            "Moreover, People can express their feelings and thoughts by music. Music has become part of our boring lives and people should be grateful for artists."
+            "Artists make our world more amusing and interesting because people would be bored without music. Just imagine world without any tone or music, I would rather commit a suicide instead of being alive."
+            "During the quarantine, people listen to music more than before because it´s one of the activity they are able to do. Music helps us to keep our mind busy, healthy and also escape people from reality."
+            "Music has the ability to make some situations really special, f.e. on weddings, football matches, parties and also funerals. What kind of music you listen to, really influence your perspective on life."
+            "If you want to have the best enjoyment of listening to music, you have to buy high quality electrical device. It could be headphones or reproducers. I prefer to use headphones when I listen to music."
+            "Nobody knows what you are listening to and I think it´s the best way to achieve awesome enjoyment."
+            "I love to listen to music a lot because music helps me to change thoughts and keep me productive during these long days. It is also"
+            "the one way how you cant hear screaming dad or mum and ignore my brother while he is crossing my room. I like to listen to English rap."
+            "I usually listen to music for 5 hours a day. Some people think of me that the music is drug for me but I can’t complain because it´s truth."
+            "And you, what is your relationship with music? Do you like to listen to music? How many hours do you listen to music?" },
+        2: {"title":"Happines",
+            "content": "First of all, we should define happiness and what happiness brings about. The Happiness is one of many emotional conditions/statuses/states which is able to achieve in people´s lives."
+            "Happiness is part of bright side of life. People are usually joyful, nice to people or more helpful and try to impress other people by making right things."
+            "People usually do things that make them happy. For example they do many activities, are in healthy relationship that doesn’t originate them pain or plans start to work out as somebody has expected."
+            "If somebody is happy, things goes much easier and everything works out right. People usually don’t contemplate about worries or daily problems."
+            "However, there are facts that happiness could be lost and it is very hard to obtain it back."
+            "People are most likely to lose happiness if somebody breaks up with them, lose member of family, examination doesn’t go as somebody´s expectation, lose a friend and I could mention many more."
+            "Happiness could be influenced by your type of music you listen to. People start to be depressed, feel anxious and argue a lot with everyone without any reasonable reason or distance themselves socially."
+            "Of course people start to have trust issues. Despite of these negativities, there is one positive aspect of being unhappy."
+            "The things is that people have a lot of time to improve their skills in section what they really like and be better from day to day. For some people it’s an indicator to find happiness once again."
+            "However, some days would be hard and you might feel emptiness but that factual person has to overcome it. Nevertheless, it’s easier if people are surrounded by good people and try to help them."
+            "In my opinion, Happiness is very hard to maintain nowadays and harder to obtain it back later. The first reason is that many people are fake."
+            "They only mind their business and don’t take care about feelings and mental health of others. They pretend like genuine friend but they would like to stick knife into your back."
+            "Second reason is that if you get older you have many responsibilities at your shoulder. Some people couldn’t endure the pressure and start to be miserable and faint."
+            "The third reason is that the specific person is tired of being sad and he got used to it. He doesn’t have an energy to fight back or anymore and start to rely on other people to help him."
+            "It could be parents, close friends or psychologist. Nodaway’s killer of happiness is social distancing. Many people were used to go out with friends every week or they are not used to be indoor a whole day."
+            "They likely stay at home and watch Netflix or listen to music. There are some cases where parents don’t allow them to go anywhere because they are terrified of infection due to coronavirus."
+            "To prevent our happiness during the quarantine, we should find many activities and keep our mind busy"
+            "and amusing. I would say that the happiness is the most valuable value in our lives. If people are happy then everything seems much better and easier. We should be more cautious and don’t be vicious."},
+        3: {"title":"Plastic should be banned?",
+            "content":"Long time ago, plastics didn’t exist and some tools or equipment had to be replaced by something else. Manufacturing was demanding sometimes and has taken long time."
+            "However, when plastics was discovered then everything has gone much easier and our lives have become easier. The plastics has replaced many things including plastic bags, Plexiglas and many more."
+            "Some things couldn’t exist without plastics. We can also use more things that are made from plastics and they are really useful for us."
+            "Over the time, the scientists have started to doubt plastics because of their disadvantages."
+            "Plastic tools are usually manufactured in factories and they contain toxic chemicals. They are very harmful to our nature and environment."
+            "They usually degrade in nature for a very long time and they bring about air pollution and land pollution."
+            "If marine animals swallow plastics, they can suffocate and die. Although, people and animals that live on land usually swallow plastics in form of micro plastics."
+            "They are very harmful for us because they usually cause illnesses or somebody could also die. Some animals could be entangled into plastics and can’t escape."
+            "This is the reason why they usually die due to hunger or dehydration. Sewerage is clogged by plastics and it causes many problems in towns and villages."
+            "If sewerage is clogged, it stinks very badly. People use plastic things so much nowadays and in my opinion we should reduce the usage of plastics. When people were able to reduce it 25 years ago, we should do it too."
+            "Some things should be replaced by renewable sources that will not pollute our nature and environment. Nevertheless, we should divide plastics into 2 groups."
+            "The first group consists of useful and unreplaceable plastics which we are not able to replace with anything else in spite of bad impact. Perhaps, people will have ability to replace them in few years."
+            "The second one consists of bootless things which pollute our beautiful nature the most and have a negative impact on human health."
+            "They should be replaced by renewable sources. We should take care about our Earth because we have only one home. And what do you think about plastics?"},
+        4: {"title":"Technology",
+            "content":"Sometimes, technology is very wholesome/useful for people and help them to relieve their lives. The first invention that really relieved our lives was printer. "
+            "Nevertheless, it has some disadvantages that should to be mention. Some people are very addicted and it leads to nervousness, irritation and laziness."
+            "Computer games can be very dangerous because gamers are very frustrated if they lose game or something goes wrong. Although, they are getting well paid for playing games."
+            "Average professional gamer usually earns 6000 euros per month. It depends on his experience and number of hours he has been playing. Another disadvantage of technology usage is misusing at your avail."
+            "The small part of Internet is a basic web which one can know and use it almost every day. Bigger part is dark web. Dark web seems very similar to normal web but there are many illegal things to buy."
+            "Murderers often use it like connection to people or drug dealers till police doesn’t catch them. Some technologies could be harmful to our nature and environment for example cars, airplanes or factories."
+            "People couldn’t manage many things without these technologies. Cars have the ability to transport us from one place to another place."
+            "People can travel for long distances in short time by plane and factories manufacture things, substances that we need."
+            "When it comes to artificial intelligence we should be very careful because it’s very dangerous field of technology. It would be so demanding to defeat some machines which take control over us."
+            "They will be few steps before us furthermore it can improve our public health and move humanity forward."
+            "Perhaps we will finally find vaccine or medicament to heal cancer or some unhealed disorders which kill many people every year."  }
+        
+    }
