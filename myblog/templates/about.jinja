@@ -1,32 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Welcome to Markdown blog!</title>
-	<link rel="stylesheet" type="text/css" href={{ url_for("static",filename = "css/main.css")}}>
-</head>
-<body>
-<header>
-	<h1>Articles that I have written</h1>
-</header>
+{% extends "_main.jinja" %}
+{% block title %} My articles! {% endblock %}
 
-<nav>
-	<ul class=nav>
-		<li><a href="#">About</a></li>
-		<li><a href="#">Articles</a></li>
-		<li><a href="#">Admin</a></li>
-	</ul>
-</nav>
-
-<main>
-	The personal information is not given or the customer doesnt want to fill it in.
-</main>	
-	
-<footer>
-	<p>
-		(C) 2020 Illnesses
-	</p>
-</footer>
-
-
-</body>
-</html>
+{% block main %} The personal information wasnt given by developer. There is chance that he doesnt want to fill it in! Keep smiling and be positive! :) 
+{% endblock %}

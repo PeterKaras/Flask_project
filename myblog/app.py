@@ -4,22 +4,18 @@ from flask import render_template
 flask_app= Flask(__name__)
 
 @flask_app.route("/")
-def view_main():
-    return render_template("_main.jinja")
+def view_welcome_page():
+    return render_template("welcome_page.jinja")
 
 @flask_app.route("/about/")
 def view_about():
     return render_template("about.jinja")
 
-@flask_app.route("/welcome_page")
-def view_welcome():
-    return "This is main page!"
-
 @flask_app.route("/admin/")
 def view_admin():
-    return "U have logged in"
+    return render_template("admin.jinja")
 
 @flask_app.route("/articles/")
 def view_articles():
-    return "Here should be some articles!"
+    return render_template("articles.jinja")
 #192.168.1.19
