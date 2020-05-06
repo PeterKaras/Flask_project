@@ -10,9 +10,6 @@ header {
 	overflow: hidden;
 	text-align: center;
 }
-p {
-	display: block;
-}
 .nav li {
 	display: inline;
 }
@@ -21,6 +18,11 @@ p {
 	padding: 10px;
 	text-decoration: blink;
 }
+.nav form {
+	display: inline-block;
+	padding: 10px;
+	text-decoration-style: none;
+}
 footer {
-	text-align:center;
+	text-align: center;
 }
