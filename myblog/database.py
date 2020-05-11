@@ -58,6 +58,31 @@ articles = {
             "People can travel for long distances in short time by plane and factories manufacture things, substances that we need."
             "When it comes to artificial intelligence we should be very careful because it’s very dangerous field of technology. It would be so demanding to defeat some machines which take control over us."
             "They will be few steps before us furthermore it can improve our public health and move humanity forward."
-            "Perhaps we will finally find vaccine or medicament to heal cancer or some unhealed disorders which kill many people every year."  }
+            "Perhaps we will finally find vaccine or medicament to heal cancer or some unhealed disorders which kill many people every year."  },
+        5: {"title":"Mars",
+            "content": "Long time ago, people didn´t know basic information about the Earth and universe. Nature and universe were intriguing from beginning and many people were confused."
+            "Phenomena couldn’t be clarify into intelligible language. By the time, technology has been improving and humanity has been obtaining the powerful fundamentals to discover a beauties of Earth and universe."
+            "The many essential laws of nature have been understood and some of them have been reformed. However, many of them have been prescribed when first astronaut has been released into space."
+            "The first trails into universe were accomplished 50 years ago. Since that time, scientist has made a huge progress in discovering universe."
+            "New stars have been detected, our moon and many planets have been discovered. Solar system consists of 8 planets and the sun which is in the middle of solar system."
+            "The biggest planet is Jupiter and the smallest one is Mercury. Nevertheless, our planet is getting heavy and humanity starts to overpopulate."
+            "It causes many problems and humanity has started to do progress in this section. Scientists have started to make many researches of our solar system to move humanity on another planet."
+            "The best option where people could be moved is Mars. Mars is the fourth planet in the solar system and it is smaller than Earth. Mars is quite close to earth, we could say that he is neighbor with Earth."
+            "However, life would be very diverse on Mars because there is not enough oxygen to breath normally as on the Earth. Although, conditions are sufficient to live there."
+            "Mars is often called rusty world or red plant. The name was based on result of his color. Surface is quite red or rusty."
+            "The first Inhabitants will be living in colonies and be obligated to wear particular costumes to protect themselves or plant plants in specific bins and areas."
+            "Shops will be transformed into something unrecognizable and different. The food supplies would be delivered by rockets from Earth and grocer´s would be divided evenly."
+            "Gravity and rotation axis are entirely distinct. People have to put less efforts to do essential activities including jumping or even walking."
+            "Perhaps, this impact would be reflected on body shape and transposing things. Inhabitants of Mars may feel weaker or faint/feeble and even gentle touch would have consequences."
+            "One day lasts 37 minutes longer than on Earth. Seasons would be shifted. This effect would have a big impact on people of doing casual things."
+            "Many people would appreciate it because time is very scarce. Surface of mars is not discovered very well and some places would be dangerous for people."
+            "First of all, Stroll would be dangerous and leaving colonies would have disastrous reflection. The highest temperature that can be reached is 70 degrees and the coolest temperature is -125 degrees."
+            "I have mentioned many varieties that have ability to influence people´s lives on Mars. In my opinion, moving on another planet is very significant and demanding task that humanity could ever oppose/face."
+            "There are many factors which influence our moving to Mars or even to another planet."
+            "Nevertheless, we would have an ability to obtain new substances or invent new technologies which will be useful for people in case of occupying new planets."
+            "Scientist should be very cautious about this challenge because likelihood of failure is high. Our rockets are not very good assembled and furnished. Constructions are obsolete and insufficient."
+            "I really hope it will improve in few years and accomplishments of discovering will be increasing."
+            "However, people should be satisfied with life on Earth and don’t complain about everything. Envy and jealousy is killer of satisfaction."
+            }
         
     }
