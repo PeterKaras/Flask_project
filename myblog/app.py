@@ -10,6 +10,7 @@ import sqlite3
 
 flask_app = Flask(__name__)
 flask_app.config.from_pyfile("/vagrant/configs/default.py")
+#flask_app.config.from_pyfile("/vagrant/configs/develop.py")
 
 if "MYBLOG_CONFIG" in os.environ:
     flask_app.config.from_envvar("MYBLOG_CONFIG")
@@ -38,7 +39,7 @@ def view_articles():
 @flask_app.route("/articles/",methods=["POST"])
 def add_article():
     db = get_db()
-    cur = db.execute("insert into articles (title,content) values (?,?)",
+    db.execute("insert into articles (title,content) values (?,?)",
                      [request.form.get("title"),request.form.get("content")])
     db.commit()
     return redirect(url_for("view_articles"))
@@ -50,8 +51,7 @@ def view_article(art_id):
     article = cur.fetchone()                  
     if article:
         return render_template("article.jinja",article=article)
-    else:
-        return render_template("page_not_found.jinja",art_id=art_id)
+    return render_template("page_not_found.jinja",art_id=art_id)
 
 @flask_app.route("/login/", methods = ["GET"])
 def view_login():
