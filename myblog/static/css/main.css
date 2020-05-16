@@ -6,7 +6,7 @@ header {
 }
 .nav {
 	padding: 0;
-	list-style: lower-norwegian;
+	list-style: none;
 	overflow: hidden;
 	text-align: center;
 }
@@ -16,7 +16,7 @@ header {
 .nav a {
 	display: inline-block;
 	padding: 10px;
-	text-decoration: blink;
+	text-decoration: none;
 }
 .nav form {
 	display: inline-block;
@@ -25,4 +25,25 @@ header {
 }
 footer {
 	text-align: center;
+}
+.flashes {
+	padding: 0;
+	position: sticky;
+	top: 0;
+	width: 100%;
+}
+.flashes li{
+	list-style: none;
+	text-align: center;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 5px;
+	border-color: lightgray;
+	padding: 3px;
+}
+.flashes .alert-danger{
+	background: mistyrose;
+}
+.flashes .alert-success{
+	background: yellow;
 }

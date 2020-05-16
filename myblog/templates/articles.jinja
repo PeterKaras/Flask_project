@@ -4,10 +4,12 @@
 {% block main %} 
 	{% if articles %}
 		<ul>
-			{% for article in articles %}
+		{% for article in articles %}
+			<li>
 				<h2><a href="{{url_for("view_article",art_id=article.id) }}">{{article.title}}</a></h2>
 				<p>{{ article.content | truncate(300) }}</p>
-			{% endfor %}
+			</li>
+		{% endfor %}
 		</ul>
 	{% else %}
 		<p>NO articles!</p>
