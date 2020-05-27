@@ -7,7 +7,9 @@ from flask import session
 from flask import g
 from flask import flash
 import os
-import sqlite3
+
+from .models import db
+from .models import Article
 
 from flask_wtf import FlaskForm
 from wtforms import StringField
@@ -21,6 +23,8 @@ flask_app.config.from_pyfile("/vagrant/configs/develop.py")
 
 if "MYBLOG_CONFIG" in os.environ:
     flask_app.config.from_envvar("MYBLOG_CONFIG")
+
+db.init_app(flask_app)#napoji sa na app.py
 
 #FORMS
 class LoginForm(FlaskForm):
@@ -50,9 +54,7 @@ def view_admin():
 #ARTICLES
 @flask_app.route("/articles/",methods=["GET"])
 def view_articles():
-    db = get_db()
-    cur = db.execute("select * from articles order by id desc")
-    articles = cur.fetchall()
+    articles = Article.query.order_by(Article.id.desc())#zoradene clanky od najnovsich
     return render_template("articles.jinja",articles=articles)
 
 @flask_app.route("/article/new",methods=["GET"])
@@ -66,37 +68,28 @@ def view_add_article():
 def view_article_editor(art_id):
     if "logged" not in session:
         return redirect(url_for("view_login"))
-    edit_form = ArticleForm(request.form)
-    if edit_form.validate():
-        db = get_db()
-        cur = db.execute("select * from articles where id=(?)",[art_id])
-        article = cur.fetchone()
-        if article:
-            form = ArticleForm()
-            form.title.data = article["title"]
-            form.content.data = article["content"]
-            return render_template("article_editor.jinja",form=form,article = article)
-        else:
-            return render_template("page_not_found.jinja")
-    else:
-        for error in login.form.errors:
-            flash("{} is missing!".format(error),"alert-danger")
-        return redirect(url_for("view_login"))
+    article = Article.query.filter_by(id=art_id).first()
+    if article:
+        form = ArticleForm()
+        form.title.data = article.title
+        form.content.data = article.content
+        return render_template("article_editor.jinja",form=form,article = article)
+    return render_template("page_not_found.jinja")
+
 
 @flask_app.route("/article/<int:art_id>",methods=["POST"])
 def edit_article(art_id):
     if "logged" not in session:
         return redirect(url_for("view_login"))
     
-    db = get_db()
-    cur = db.execute("select * from articles where id=(?)",[art_id])
-    article = cur.fetchone()
+    article = Article.query.filter_by(id=art_id).first()
     if article:
         edit_form = ArticleForm(request.form)
         if edit_form.validate():
-            db.execute("update articles set title=?,content=? where id=?",
-                 [edit_form.title.data,edit_form.content.data,art_id])
-            db.commit()
+            article.title = edit.form.title.data
+            article.content = edit.form.content.data
+            db.session.add(article)
+            db.session.commit()
             flash("Edit saved","alert-success")
             return redirect(url_for("view_article",art_id = art_id))
         else:
@@ -112,10 +105,10 @@ def add_article():
         return redirect(url_for("view_login"))
     edit_form = ArticleForm(request.form)
     if edit_form.validate():
-        db = get_db()
-        db.execute("insert into articles (title,content) values (?,?)",
-                [request.form.get("title"),request.form.get("content")])
-        db.commit()
+        new_article = Article(title=add_form.title.data,
+                              content = add.form.content.data)
+        db.session.add(new_article)
+        db.session.commit()
         flash("Article was saved!","alert-success")
         return redirect(url_for("view_articles"))
     else:
@@ -126,9 +119,7 @@ def add_article():
 
 @flask_app.route("/articles/<int:art_id>/")
 def view_article(art_id):
-    db = get_db()
-    cur = db.execute("select * from articles where id=(?)",[art_id])
-    article = cur.fetchone()                  
+    article = Article.query.filter_by(id=art_id).first()               
     if article:
         return render_template("article.jinja",article=article)
     return render_template("page_not_found.jinja",art_id=art_id)
@@ -165,8 +156,21 @@ def logout_user():
     flash("Logout successful","alert-success")
     return redirect(url_for("view_welcome_page"))
 
-#utils DATABASE
-def connect_db():
+#CLI COMMANDS
+def init_db(app):
+    #bude inicializovat databasu
+    with app.app_context():
+        db.create_all()
+        print("Database inicialized")
+        
+"""def init_db(app):
+    #bude inicializovat databasu
+    with app.app_context():
+        db = get_db()
+        with open("myblog/schema.sql","r") as fp:
+            db.cursor().executescript(fp.read())
+        db.commit()"""
+"""def connect_db():
     #pripajam sa na databazu
     rv = sqlite3.connect(flask_app.config["DATABASE"])
     rv.row_factory = sqlite3.Row
@@ -182,14 +186,6 @@ def get_db():
 def close_db(error):
     #error je povinna hodnota a zatvaranie databazy
     if hasattr(g, "sqlite_db"):
-        g.sqlite_db.close()
-
-def init_db(app):
-    #bude inicializovat databasu
-    with app.app_context():
-        db = get_db()
-        with open("myblog/schema.sql","r") as fp:
-            db.cursor().executescript(fp.read())
-        db.commit()
+        g.sqlite_db.close()"""
 
 #192.168.1.19
